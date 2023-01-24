@@ -30,3 +30,4 @@ function displayDrinkData(data) {
     console.log(data.drinks[0].strDrink);
     console.log(data.drinks[0].strDrinkThumb)
 }
+
