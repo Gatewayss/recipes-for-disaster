@@ -1,8 +1,18 @@
-let ingredient = "egg"
-let foodURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + ingredient
+const foodInput = document.getElementById('foodInput')
+const foodSearchBtn = document.getElementById('searchBtn')
 const foodContainer = document.getElementById('food')
+const drinkContainer =document.getElementById('drink')
 
-requestData(foodURL)
+let spirit = "gin"
+let drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + spirit
+
+
+searchBtn.addEventListener('click', function () {
+    let ingredient = foodInput.value
+    let foodURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + ingredient
+    requestData(foodURL)
+})
+
 function requestData(foodURL) {
     fetch(foodURL)
         .then((response) => response.json())
@@ -14,12 +24,8 @@ function displayFoodData(data) {
     console.log(data.meals[0].strMealThumb)
 }
 
-let spirit = "gin"
-let drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + spirit
-const drinkContainer =document.getElementById('drink')
-console.log(drinkURL);
+/*
 
-requestData(drinkURL)
 function requestData(drinkURL) {
     fetch(drinkURL)
         .then((response) => response.json())
@@ -30,3 +36,4 @@ function displayDrinkData(data) {
     console.log(data.drinks[0].strDrink);
     console.log(data.drinks[0].strDrinkThumb)
 }
+*/
