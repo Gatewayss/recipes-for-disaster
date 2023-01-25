@@ -1,12 +1,11 @@
 const foodInput = document.getElementById('foodInput')
 const foodSearchBtn = document.getElementById('foodSearchBtn')
 const foodContainer = document.getElementById('food')
+const foodTitle = document.getElementById('foodTitle')
 const drinkInput = document.getElementById('drinkInput')
 const drinkSearchBtn = document.getElementById('drinkSearchBtn')
 const drinkContainer =document.getElementById('drink')
-
-//let spirit = "gin"
-//let drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + spirit
+const drinkTitle = document.getElementById('drinkTitle')
 
 drinkSearchBtn.addEventListener('click', function () {
     let spirit = drinkInput.value
@@ -21,7 +20,7 @@ function requestDrinkData(drinkURL) {
 }
 
 function displayDrinkData(data) {
-    console.log(data.drinks[0].strDrink);
+    drinkTitle.textContent= data.drinks[0].strDrink;
     console.log(data.drinks[0].strDrinkThumb)
 }
 
@@ -38,6 +37,6 @@ function requestData(foodURL) {
 }
 
 function displayFoodData(data) {
-    console.log(data.meals[0].strMeal);
+    foodTitle.textContent= data.meals[0].strMeal;
     console.log(data.meals[0].strMealThumb)
 }
