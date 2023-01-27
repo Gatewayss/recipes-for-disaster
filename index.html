@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipes for disaster</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="./assets/css/styles.css" rel="stylesheet"/>
-</head>
-<body>    
-
-    <header>
-        <h1>
-            If you cannot decide we will for you
-        </h1>
-        <p>Submit your ingredients and we'll connect you with similar foods</p>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="column has-text-centered">
+      <h1>If you cannot decide we will for you</h1>
+      <p>Submit your ingredients and we'll connect you with similar foods</p>
     </header>
 
-    <div id="food"> 
-        <div>
-            <input type="text" id="foodInput">
-            <button type="submit" id="foodSearchBtn">Search</button>
-            <p id="foodTitle"></p>
-            <img id="foodImage">
-        </div> 
-    </div>
+    <div class="columns is-centered">
+      <div id="food">
+        <p id="foodTitle"></p>
+        <img id="foodImage" />
+        <input type="text" id="foodInput" />
+        <button type="submit" id="foodSearchBtn">Search</button>
+      </div>
 
-    <div id="drink">
-        <div>
-            <input type="text" id="drinkInput">
-            <button type="submit" id="drinkSearchBtn">Search</button>
-            <p id="drinkTitle"></p>
-            <img id="drinkImage">
-        </div> 
+      <div id="drink">
+        <p id="drinkTitle"></p>
+        <img id="drinkImage" />
+        <input type="text" id="drinkInput" />
+        <button type="submit" id="drinkSearchBtn">Search</button>
+      </div>
     </div>
-    
     <script src="./assets/js/main.js"></script>
-</body>
+  </body>
 </html>
