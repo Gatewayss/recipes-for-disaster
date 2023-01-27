@@ -18,31 +18,37 @@
 
     <div class="columns is-centered">
       <div id="food">
-        <p id="foodTitle"></p>
+        <p class="has-text-centered" id="foodTitle"></p>
         <div>
           <img id="foodImage" />
         </div>
-        <div class="columns mr-5">
-          <input type="text" id="foodInput" class="input is-normal mr-2" />
-          <button type="submit" id="foodSearchBtn" class="button is-success">
-            Search
-          </button>
-        </div>
+        <div class="field has-addons">
+            <div class="control">
+              <input id="foodInput" class="input is-normal mr-2" type="text" placeholder="Ex: Chicken">
+            </div>
+            <div class="control">
+              <a type="submit" id="foodSearchBtn" class="button is-success">
+                Search
+              </a>
+            </div>
+          </div>
       </div>
 
       <div id="drink">
-        <p id="drinkTitle"></p>
+        <p class="has-text-centered" id="drinkTitle"></p>
         <div>
           <img id="drinkImage" />
         </div>
-        <div class="control">
-          <div class="columns ml-5">
-            <input type="text" id="drinkInput" class="input is-normal mr-2" />
-            <button type="submit" id="drinkSearchBtn" class="button is-success">
-              Search
-            </button>
+        <div class="field has-addons">
+            <div class="control">
+              <input id="drinkInput" class="input is-normal mr-2" type="text" placeholder="Find a repository">
+            </div>
+            <div class="control">
+              <a type="submit" id="drinkSearchBtn" class="button is-success">
+                Search
+              </a>
+            </div>
           </div>
-        </div>
       </div>
     </div>
     <script src="./assets/js/main.js"></script>
