@@ -19,10 +19,15 @@ foodSearchBtn.addEventListener('click', function () {
 function requestData(foodURL) {
     fetch(foodURL)
         .then((response) => response.json())
-        .then((data) => displayFoodData(data));
+        .then((data) => displayFoodData(data));  
 }
 
+
+
 function displayFoodData(data) {
+    if (data.meals === null){
+        alert("Not Valid, Please try again");
+     }
     foodTitle.textContent= data.meals[0].strMeal;
     foodImg.src = data.meals[0].strMealThumb
 }
