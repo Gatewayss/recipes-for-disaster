@@ -23,6 +23,9 @@ function requestData(foodURL) {
 }
 
 function displayFoodData(data) {
+    if (data.meals === null){
+        alert("Not Valid, Please try again");
+     }
     foodTitle.textContent= data.meals[0].strMeal;
     foodImg.src = data.meals[0].strMealThumb
 }
@@ -35,8 +38,12 @@ drinkSearchBtn.addEventListener('click', function () {
 
 function requestDrinkData(drinkURL) {
     fetch(drinkURL)
-        .then((response) => response.json())
-        .then((data) => displayDrinkData(data));
+        .then((response) => response?.json())
+        .then((data) => displayDrinkData(data))
+        .catch(err => {
+            alert("Not Vald, Please try again");
+        })
+        
 }
 
 function displayDrinkData(data) {
