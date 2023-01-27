@@ -44,4 +44,24 @@ function displayDrinkData(data) {
     drinkImg.src = data.drinks[0].strDrinkThumb
 }
 
+drinkSearchBtn.addEventListener('click', function (event) {
+    const drinkName = document.getElementById("drinkInput").value;
 
+  
+    const drinkHistory = JSON.parse(localStorage.getItem("drinkHistory") || "[]");
+
+    drinkHistory.push({drinkName});
+
+    localStorage.setItem("drinkHistory", JSON.stringify(drinkHistory));
+});
+
+foodSearchBtn.addEventListener('click', function (event) {
+    const foodName = document.getElementById("foodInput").value;
+
+  
+    const foodHistory = JSON.parse(localStorage.getItem("foodHistory") || "[]");
+
+    foodHistory.push({foodName});
+
+    localStorage.setItem("foodHistory", JSON.stringify(foodHistory));
+});
