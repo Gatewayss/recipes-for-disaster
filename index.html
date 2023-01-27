@@ -11,44 +11,55 @@
     <link href="./assets/css/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="column has-text-centered">
-      <h1>If you cannot decide we will for you</h1>
-      <p>Submit your ingredients and we'll connect you with similar foods</p>
-    </header>
-
+    <div class="box">
+      <header class="column has-text-centered">
+        <h1 class="is-size-2">If You Cannot Decide We Will For You</h1>
+        <p class="is-size-5">
+          Submit your ingredients and we'll connect you with similar foods
+        </p>
+      </header>
+    </div>
     <div class="columns is-centered">
       <div id="food">
-        <p class="has-text-centered" id="foodTitle"></p>
+        <p class="has-text-centered pt-5" id="foodTitle"></p>
         <div>
-          <img id="foodImage" />
+          <img class="has-image-centered" id="foodImage" />
         </div>
-        <div class="field has-addons">
-            <div class="control">
-              <input id="foodInput" class="input is-normal mr-2" type="text" placeholder="Ex: Chicken">
-            </div>
-            <div class="control">
-              <a type="submit" id="foodSearchBtn" class="button is-success">
-                Search
-              </a>
-            </div>
+        <div class="field has-addons mr-3">
+          <div class="control">
+            <input
+              id="foodInput"
+              class="input is-normal "
+              type="text"
+              placeholder="Ex: Chicken" />
           </div>
+          <div class="control">
+            <a type="submit" id="foodSearchBtn" class="button is-success">
+              Search
+            </a>
+          </div>
+        </div>
       </div>
 
       <div id="drink">
-        <p class="has-text-centered" id="drinkTitle"></p>
+        <p class="has-text-centered pt-5" id="drinkTitle"></p>
         <div>
-          <img id="drinkImage" />
+          <img class="has-image-centered is-rounded" id="drinkImage" />
         </div>
         <div class="field has-addons">
-            <div class="control">
-              <input id="drinkInput" class="input is-normal mr-2" type="text" placeholder="Find a repository">
-            </div>
-            <div class="control">
-              <a type="submit" id="drinkSearchBtn" class="button is-success">
-                Search
-              </a>
-            </div>
+          <div class="control">
+            <input
+              id="drinkInput"
+              class="input is-normal mr-2"
+              type="text"
+              placeholder="Ex: Vodka" />
           </div>
+          <div class="control">
+            <a type="submit" id="drinkSearchBtn" class="button is-success">
+              Search
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./assets/js/main.js"></script>
