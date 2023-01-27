@@ -18,17 +18,37 @@
 
     <div class="columns is-centered">
       <div id="food">
-        <p id="foodTitle"></p>
-        <img id="foodImage" />
-        <input type="text" id="foodInput" placeholder="Ex: Chicken"/>
-        <button type="submit" id="foodSearchBtn">Search</button>
+        <p class="has-text-centered" id="foodTitle"></p>
+        <div>
+          <img id="foodImage" />
+        </div>
+        <div class="field has-addons">
+            <div class="control">
+              <input id="foodInput" class="input is-normal mr-2" type="text" placeholder="Ex: Chicken">
+            </div>
+            <div class="control">
+              <a type="submit" id="foodSearchBtn" class="button is-success">
+                Search
+              </a>
+            </div>
+          </div>
       </div>
 
       <div id="drink">
-        <p id="drinkTitle"></p>
-        <img id="drinkImage" />
-        <input type="text" id="drinkInput" placeholder="Ex: Vodka" />
-        <button type="submit" id="drinkSearchBtn">Search</button>
+        <p class="has-text-centered" id="drinkTitle"></p>
+        <div>
+          <img id="drinkImage" />
+        </div>
+        <div class="field has-addons">
+            <div class="control">
+              <input id="drinkInput" class="input is-normal mr-2" type="text" placeholder="Find a repository">
+            </div>
+            <div class="control">
+              <a type="submit" id="drinkSearchBtn" class="button is-success">
+                Search
+              </a>
+            </div>
+          </div>
       </div>
     </div>
     <script src="./assets/js/main.js"></script>
