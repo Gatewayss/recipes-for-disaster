@@ -5,7 +5,7 @@ How often do you find yourself feeling hungry or thirsty but don't know what to 
 
 #### Instructions
 
-Enter the ingredient you'd like to use in the search bar, then click "search" The matching recipe will appear above the search bar. If no recipe is found, a message will appear suggesting you try a different ingredient.
+Enter the ingredient you'd like to use in the search bar, then click "search". The matching recipe will appear above the search bar. If no recipe is found, a message will appear suggesting you try a different ingredient.
 
 #### Links 
 - [Deployed Application]()
