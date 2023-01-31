@@ -3,3 +3,9 @@ img {
     width: 0 auto;
     padding: 1.5em;
 }
+
+body {
+    height: 100%;
+    padding-bottom: 4em;
+}
+
