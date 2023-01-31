@@ -12,18 +12,21 @@ const drinkTitle = document.getElementById('drinkTitle')
 const drinkImg = document.getElementById('drinkImage')
 const drinkList = document.getElementById('drink-list')
 
+// This function creates the URL data for the API
 foodSearchBtn.addEventListener('click', function () {
     let ingredient = foodInput.value
     let foodURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + ingredient
     requestData(foodURL)
 })
 
+// starts search and takes data to a .json format
 function requestData(foodURL) {
     fetch(foodURL)
         .then((response) => response.json())
         .then((data) => displayFoodData(data));
 }
 
+// Displays an error message when searching outside API limits
 function displayFoodData(data) {
     if (data.meals === null) {
         Swal.fire({
@@ -55,11 +58,13 @@ function requestDrinkData(drinkURL) {
         })
 }
 
+// Displays Data and image from food API search
 function displayDrinkData(data) {
     drinkTitle.textContent = data.drinks[0].strDrink;
     drinkImg.src = data.drinks[0].strDrinkThumb
 }
 
+// Sets search data to local storage
 drinkSearchBtn.addEventListener('click', function (event) {
     const drinkName = document.getElementById("drinkInput").value;
     const drinkHistory = JSON.parse(localStorage.getItem("drinkHistory") || "[]");
@@ -76,6 +81,7 @@ foodSearchBtn.addEventListener('click', function (event) {
     addNewFoodItem(foodName)
 });
 
+// Displays History in a list format
 function displayDrinkLocalStorage() {
     let drinkStorage = JSON.parse(localStorage.getItem("drinkHistory"))
     if (!drinkStorage) {
@@ -102,6 +108,7 @@ function displayFoodLocalStorage() {
     }
 }
 
+// Displays History in a list format
 function addNewDrinkItem(drinkName) {
     let li = document.createElement('li')
     li.textContent = drinkName
@@ -114,6 +121,6 @@ function addNewFoodItem(foodName) {
     foodList.prepend(li)
 }
 
-
+// Local Data Remains on refresh of page
 displayDrinkLocalStorage()
 displayFoodLocalStorage()
