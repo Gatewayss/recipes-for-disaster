@@ -8,12 +8,12 @@ How often do you find yourself feeling hungry or thirsty but don't know what to 
 Enter the ingredient you'd like to use in the search bar, then click "search". The matching recipe will appear above the search bar. If no recipe is found, a message will appear suggesting you try a different ingredient.
 
 #### Links 
-- [Deployed Application]()
+
+- [Deployed Application](https://gatewayss.github.io/recipes-for-disaster/)
 - [Source Code](https://github.com/Gatewayss/recipes-for-disaster/blob/main/assets/js/main.js)
 - [MIT License](https://choosealicense.com/licenses/mit/)
 
 #### Authors 
-
 
 <a href="https://github.com/Gatewayss/recipes-for-disaster/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Gatewayss/recipes-for-disaster" />
