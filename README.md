@@ -23,6 +23,6 @@ Enter the ingredient you'd like to use in the search bar, then click "search". T
 
 This project is ongoing, but progress has temporarily slowed. Our future development goals include:
 
-- Implementing a personalized alert system
+- Add a randomize recipe feature where the user can search the same ingredient multiple times and get a different result each time 
 - Make the previous searches clickable links for easier navigation  
 - Displaying the recipe in addition to the title and image for a more complete user experience
