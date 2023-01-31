@@ -26,7 +26,11 @@ function requestData(foodURL) {
 
 function displayFoodData(data) {
     if (data.meals === null) {
-        alert("Not Valid, Please try again");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+          })
     }
     foodTitle.textContent = data.meals[0].strMeal;
     foodImg.src = data.meals[0].strMealThumb
@@ -43,7 +47,11 @@ function requestDrinkData(drinkURL) {
         .then((response) => response?.json())
         .then((data) => displayDrinkData(data))
         .catch(err => {
-            alert("Not Vald, Please try again");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+              })
         })
 }
 
